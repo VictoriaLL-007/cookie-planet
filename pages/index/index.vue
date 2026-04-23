@@ -11,7 +11,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello，这是我的第一个APP'
 			}
 		},
 		onLoad() {
