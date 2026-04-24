@@ -1,52 +1,21 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+  <view class="home">
+    <view class="menu" @click="go('/pages/books/books')">英文绘本</view>
+    <view class="menu" @click="go('/pages/musics/musics')">英文儿歌</view>
+    <view class="menu" @click="go('/pages/read/read')">字母启蒙</view>
+    <view class="menu" @click="go('/pages/my/my')">我的中心</view>
+  </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello，这是我的第一个APP'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	}
+export default {
+  methods: {
+    go(url) { uni.navigateTo({ url }) }
+  }
+}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+<style scoped>
+.home{padding:20px}
+.menu{background:#42b983;color:#fff;margin:10px 0;padding:20px;border-radius:12px;text-align:center}
 </style>
